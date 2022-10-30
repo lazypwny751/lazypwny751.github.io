@@ -6,15 +6,22 @@ title: Lazypwny's Dump
 ![transistor](/assets/transistor.gif)
 
 # Hakkımda:
-¯\\\_(ツ)_/¯
-<!--Merhaba ben Ahmet Taha, 19 yaşındayım, Elektrik Elektronik Mühendisliği 3. sınıf öğrencisiyim, özgür yazılıma ve GNU/Linux sistemlerine ilgim var yaklaşık-->
+Merhaba ben Ahmet Taha, 19 yaşındayım, Elektrik Elektronik Mühendisliği 3. sınıf öğrencisiyim, özgür yazılıma ve GNU/Linux sistemlerine merakım var, container teknolojileri, sistem yönetimi ve otomasyonuna da ilgim var. 
 
 # Resume:
-çoğ yakında
+¯\\\_(ツ)_/¯
+
+shell, ruby, piton, awk, sqlite, redis, docker, systemd servis yönetimi, debian paket yönetimi(sunucu tarafı), rpm paket yönetimi(sunucu tarafı), arch paket yönetimi(sunucu tarafı), make, cmake, ninja build, qucs(açık kaynaklı devre simülasyon programı)
+
+resume çok yakında..
+
+¯\\\_(ツ)_/¯
 
 # Projeler:
+Burada destek sağladığım bazı güzel projeler var.
 - [BCHackTool](https://github.com/ByCh4n/BCHackTool)
-- [HeraPKG](https://github.com/lazypwny751/hera)
+- [Herapkg](https://github.com/lazypwny751/hera)
+- [PnmOS](https://pnmos.xyz)
 
 # Yazılar ve Notlar:
 ## EEM303 (İşaretler ve Sistemler)
