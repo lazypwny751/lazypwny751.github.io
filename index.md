@@ -24,6 +24,9 @@ Burada destek sağladığım bazı güzel projeler var.
 - [PnmOS](https://pnmos.xyz)
 
 # Yazılar ve Notlar:
-## EEM303 (İşaretler ve Sistemler)
+
+## [Linux From Scratch Yardımcı Rehberi](/lfs/index.html)
+
+## [EEM303 (İşaretler ve Sistemler)](/du/eem303/index.html)
 - [İşaretler ve Sistemler Ders Kaynakları](/du/eem303/kaynaklar.html)
 - [İşaretler ve Sistemler Ders Notları](/du/eem303/dersnotlari.html)
