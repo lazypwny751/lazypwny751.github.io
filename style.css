@@ -176,12 +176,15 @@ p {
     opacity: 0.7;
 }
 
+.projects ul li a,
 .social ul li a {
-    color: #87ceeb;
+    color: #add8e6;
+    font-weight: bold;
 }
 
+.projects ul li a:hover,
 .social ul li a:hover {
-    color: #add8e6;
+    color: #e0f6ff;
     opacity: 1;
 }
 
@@ -512,7 +515,7 @@ p {
     .social {
         inset-block-start: clamp(0.5rem, 2vh, 1.25rem);
         inset-inline-start: min(44vw, clamp(12.5rem, 50vw, 15rem));
-        inline-size: min(54vw, 13rem);
+        inline-size: min(54vw, 26rem);
         max-block-size: calc(100dvh - clamp(1rem, 4vh, 2.5rem));
         padding-block: clamp(1rem, 3vh, 2rem);
         padding-inline: clamp(0.625rem, 2vw, 1.375rem);
@@ -532,7 +535,8 @@ p {
     }
 
     .social {
-        inset-block-end: calc(100dvh - clamp(10rem, 26vh, 15rem) + clamp(1rem, 3vh, 2rem));
+        inset-block-start: clamp(0.5rem, 2vh, 1.25rem);
+        inset-block-end: clamp(0.5rem, 2vh, 1.25rem);
     }
 }
 
