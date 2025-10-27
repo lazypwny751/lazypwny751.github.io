@@ -1,7 +1,6 @@
 const images = [
-  "before-muffet.png",
-  "muffet-home-door.png",
-  "undertale-muffet.gif"
+  "before-muffet.gif",
+  "muffet-door.gif"
 ];
 
 const randomIndex = Math.floor(Math.random() * images.length);
