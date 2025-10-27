@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-block-start: clamp(2rem, 5vh, 4rem);
+}
+
+p {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.status {
+    position: absolute;
+    inset-block-start: clamp(1rem, 2vh, 1.5rem);
+    inset-inline-start: clamp(1rem, 2vw, 1.5rem);
+    inline-size: min(85vw, 12rem);
+    padding-block: clamp(0.875rem, 1.5vh, 1.125rem);
+    padding-inline: clamp(0.875rem, 1.5vw, 1.125rem);
+    background: black;
+    border: clamp(0.1875rem, 0.3vw, 0.25rem) solid white;
+    color: white;
+    font-family: "Courier New", monospace;
+    font-size: clamp(1.125rem, 1.8vw, 1.3125rem);
+    line-height: 1.6;
+    container-type: inline-size;
+}
+
+.status a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.status a:hover {
+    opacity: 0.7;
+}
+
+.status .name {
+    font-size: clamp(1.375rem, 3.2cqi, 1.625rem);
+    font-weight: bold;
+    margin-block-end: clamp(0.5rem, 1.2vh, 0.625rem);
+}
+
+.status .info div {
+    font-size: clamp(1.1875rem, 2.8cqi, 1.4375rem);
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.items {
+    position: absolute;
+    inset-block-start: clamp(10rem, 20vh, 13rem);
+    inset-inline-start: clamp(1rem, 2vw, 1.5rem);
+    inline-size: min(85vw, 12rem);
+    block-size: auto;
+    min-block-size: clamp(10rem, 25vh, 13rem);
+    padding-block: clamp(1.5rem, 3vh, 2.25rem);
+    padding-inline: clamp(1rem, 2vw, 1.5rem);
+    background: black;
+    border: clamp(0.1875rem, 0.3vw, 0.25rem) solid white;
+    color: white;
+    font-family: "Courier New", monospace;
+    font-size: clamp(1.375rem, 2.2vw, 1.625rem);
+    line-height: 2;
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.items a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.items a:hover {
+    opacity: 0.7;
+}
+
+.items ul {
+    list-style: none;
+}
+
+.items li {
+    font-weight: bold;
+    margin-block-end: clamp(0.75rem, 1.5vh, 1rem);
+    font-size: clamp(1.5rem, 3.8cqi, 1.875rem);
+    text-align: center;
+}
+
+.items .heart {
+    color: red;
+    margin-inline-end: 0.375rem;
+}
+
+@media screen and (min-width: 48rem) {
+    .status {
+        inset-block-start: clamp(2rem, 3vh, 2.5rem);
+        inset-inline-start: clamp(2rem, 3vw, 2.5rem);
+        inline-size: min(40vw, 15rem);
+        padding-block: clamp(1.125rem, 1.8vh, 1.375rem);
+        padding-inline: clamp(1.125rem, 1.8vw, 1.375rem);
+        border-width: clamp(0.25rem, 0.35vw, 0.3125rem);
+        font-size: clamp(1.1875rem, 1.8vw, 1.375rem);
+    }
+
+    .items {
+        inset-block-start: clamp(13.5rem, 24vh, 17rem);
+        inset-inline-start: clamp(2rem, 3vw, 2.5rem);
+        inline-size: min(40vw, 15rem);
+        min-block-size: clamp(12rem, 28vh, 15rem);
+        padding-block: clamp(1.75rem, 3.5vh, 2.5rem);
+        padding-inline: clamp(1.25rem, 2.2vw, 1.625rem);
+        border-width: clamp(0.25rem, 0.35vw, 0.3125rem);
+        font-size: clamp(1.4375rem, 2.3vw, 1.6875rem);
+        line-height: 2;
+    }
+
+    .items li {
+        font-size: clamp(1.625rem, 4.2cqi, 2rem);
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .status {
+        inset-block-start: clamp(2.5rem, 4vh, 3.75rem);
+        inset-inline-start: clamp(2.5rem, 4vw, 3.75rem);
+        inline-size: min(35vw, 17.5rem);
+        padding-block: clamp(1.25rem, 2vh, 1.5rem);
+        padding-inline: clamp(1.25rem, 2vw, 1.5rem);
+        border-width: clamp(0.3125rem, 0.4vw, 0.375rem);
+        font-size: clamp(1.25rem, 1.9vw, 1.4375rem);
+    }
+
+    .items {
+        inset-block-start: clamp(17rem, 28vh, 22rem);
+        inset-inline-start: clamp(2.5rem, 4vw, 3.75rem);
+        inline-size: min(35vw, 17.5rem);
+        min-block-size: clamp(14rem, 32vh, 18rem);
+        padding-block: clamp(2rem, 4vh, 3rem);
+        padding-inline: clamp(1.5rem, 2.5vw, 2rem);
+        border-width: clamp(0.3125rem, 0.4vw, 0.375rem);
+        font-size: clamp(1.5rem, 2.4vw, 1.75rem);
+        line-height: 2;
+    }
+
+    .items li {
+        font-size: clamp(1.75rem, 4.5cqi, 2.1875rem);
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .status {
+        inset-block-start: clamp(3.75rem, 5vh, 5rem);
+        inset-inline-start: clamp(3.75rem, 5vw, 5rem);
+        inline-size: min(30vw, 20rem);
+        padding-block: clamp(1.5rem, 2.2vh, 1.875rem);
+        padding-inline: clamp(1.5rem, 2.2vw, 1.875rem);
+        border-width: clamp(0.375rem, 0.45vw, 0.4375rem);
+        font-size: clamp(1.3125rem, 2vw, 1.5rem);
+    }
+
+    .items {
+        inset-block-start: clamp(21rem, 34vh, 27rem);
+        inset-inline-start: clamp(3.75rem, 5vw, 5rem);
+        inline-size: min(30vw, 20rem);
+        min-block-size: clamp(16rem, 36vh, 21rem);
+        padding-block: clamp(2.25rem, 4.5vh, 3.5rem);
+        padding-inline: clamp(1.875rem, 3vw, 2.5rem);
+        border-width: clamp(0.375rem, 0.45vw, 0.4375rem);
+        font-size: clamp(1.5625rem, 2.5vw, 1.8125rem);
+        line-height: 2;
+    }
+
+    .items li {
+        font-size: clamp(1.875rem, 4.8cqi, 2.375rem);
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    .status {
+        inset-block-start: clamp(5rem, 6vh, 6.25rem);
+        inset-inline-start: clamp(5rem, 6vw, 6.25rem);
+        inline-size: min(28vw, 22.5rem);
+        padding-block: clamp(1.75rem, 2.5vh, 2.125rem);
+        padding-inline: clamp(1.75rem, 2.5vw, 2.125rem);
+        border-width: clamp(0.4375rem, 0.5vw, 0.5rem);
+        font-size: clamp(1.375rem, 2.1vw, 1.5625rem);
+    }
+
+    .items {
+        inset-block-start: clamp(26rem, 40vh, 33rem);
+        inset-inline-start: clamp(5rem, 6vw, 6.25rem);
+        inline-size: min(28vw, 22.5rem);
+        min-block-size: clamp(18rem, 40vh, 24rem);
+        padding-block: clamp(2.75rem, 5vh, 4rem);
+        padding-inline: clamp(2.25rem, 3.5vw, 3rem);
+        border-width: clamp(0.4375rem, 0.5vw, 0.5rem);
+        font-size: clamp(1.625rem, 2.6vw, 1.875rem);
+        line-height: 2;
+    }
+
+    .items li {
+        font-size: clamp(2rem, 5.2cqi, 2.5rem);
+    }
+}
+
+@media screen and (min-width: 160rem) {
+    .status {
+        inset-block-start: clamp(6.25rem, 7vh, 7.5rem);
+        inset-inline-start: clamp(6.25rem, 7vw, 7.5rem);
+        inline-size: min(25vw, 26.25rem);
+        padding-block: clamp(2rem, 2.8vh, 2.5rem);
+        padding-inline: clamp(2rem, 2.8vw, 2.5rem);
+        border-width: clamp(0.5rem, 0.6vw, 0.625rem);
+        font-size: clamp(1.5rem, 2.3vw, 1.6875rem);
+    }
+
+    .items {
+        inset-block-start: clamp(31.5rem, 46vh, 40rem);
+        inset-inline-start: clamp(6.25rem, 7vw, 7.5rem);
+        inline-size: min(25vw, 26.25rem);
+        min-block-size: clamp(20rem, 44vh, 28rem);
+        padding-block: clamp(3.25rem, 5.5vh, 4.75rem);
+        padding-inline: clamp(2.75rem, 4vw, 3.5rem);
+        border-width: clamp(0.5rem, 0.6vw, 0.625rem);
+        font-size: clamp(1.75rem, 2.8vw, 2rem);
+        line-height: 2;
+    }
+
+    .items li {
+        font-size: clamp(2.1875rem, 5.6cqi, 2.75rem);
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .status {
+        inset-block-start: clamp(0.75rem, 1.5vh, 1rem);
+        inset-inline-start: clamp(0.75rem, 1.5vw, 1rem);
+        inline-size: min(90vw, 11.25rem);
+        padding-block: clamp(0.75rem, 1.2vh, 0.875rem);
+        padding-inline: clamp(0.75rem, 1.2vw, 0.875rem);
+        border-width: clamp(0.1875rem, 0.25vw, 0.1875rem);
+        font-size: clamp(1rem, 1.5vw, 1.1875rem);
+    }
+
+    .items {
+        inset-block-start: clamp(8.5rem, 17vh, 11rem);
+        inset-inline-start: clamp(0.75rem, 1.5vw, 1rem);
+        inline-size: min(90vw, 11.25rem);
+        min-block-size: clamp(9rem, 22vh, 11rem);
+        padding-block: clamp(1.375rem, 2.5vh, 1.75rem);
+        padding-inline: clamp(0.875rem, 1.5vw, 1.125rem);
+        border-width: clamp(0.1875rem, 0.25vw, 0.1875rem);
+        font-size: clamp(1.3125rem, 1.9vw, 1.5rem);
+        line-height: 2;
+    }
+
+    .items li {
+        font-size: clamp(1.375rem, 3.2cqi, 1.625rem);
+    }
+}
+
+@media screen and (max-block-size: 31.25rem) and (orientation: landscape) {
+    .status {
+        inset-block-start: clamp(0.625rem, 1.5vh, 0.75rem);
+        inset-inline-start: clamp(1rem, 2vw, 1.25rem);
+        inline-size: min(35vw, 10rem);
+        padding-block: clamp(0.625rem, 1vh, 0.75rem);
+        padding-inline: clamp(0.625rem, 1vw, 0.75rem);
+        border-width: 0.1875rem;
+        font-size: clamp(0.9375rem, 1.4vw, 1.0625rem);
+    }
+
+    .items {
+        inset-block-start: clamp(0.625rem, 1.5vh, 0.75rem);
+        inset-inline-start: clamp(12.5rem, 38vw, 15rem);
+        inline-size: min(35vw, 10rem);
+        min-block-size: clamp(8rem, 85vh, 10rem);
+        padding-block: clamp(1rem, 2vh, 1.375rem);
+        padding-inline: clamp(0.75rem, 1.2vw, 0.875rem);
+        border-width: 0.1875rem;
+        font-size: clamp(1.125rem, 1.7vw, 1.3125rem);
+        line-height: 1.9;
+    }
+
+    .items li {
+        font-size: clamp(1.25rem, 3cqi, 1.5rem);
+    }
+}
