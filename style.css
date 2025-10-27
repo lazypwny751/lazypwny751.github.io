@@ -1,3 +1,11 @@
+:root {
+    --font-mono: "Courier New", monospace;
+    --color-bg: #000;
+    --color-text: #fff;
+    --color-accent: #f00;
+    --border-color: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +13,13 @@
 }
 
 body {
-    min-height: 100vh;
     min-height: 100dvh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background: center/cover fixed no-repeat;
     color: #333;
     overflow-x: hidden;
 }
@@ -30,24 +34,36 @@ p {
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-.status {
+
+.status,
+.items,
+.about,
+.projects,
+.social {
     position: absolute;
-    inset-block-start: clamp(1.25rem, 2.5vh, 2rem);
-    inset-inline-start: clamp(2.25rem, 4vw, 3rem);
-    inline-size: min(85vw, 12rem);
-    padding-block: clamp(0.875rem, 1.8vh, 1.25rem);
-    padding-inline: clamp(1rem, 2vw, 1.5rem);
-    background: black;
-    border: clamp(0.25rem, 0.4vw, 0.3125rem) solid white;
-    color: white;
-    font-family: "Courier New", monospace;
-    font-size: clamp(1.125rem, 1.8vw, 1.3125rem);
-    line-height: 1.6;
+    background: var(--color-bg);
+    border: clamp(0.25rem, 0.4vw, 0.3125rem) solid var(--border-color);
+    color: var(--color-text);
+    font-family: var(--font-mono);
     container-type: inline-size;
 }
 
+.status,
+.items {
+    inset-inline-start: clamp(2.25rem, 4vw, 3rem);
+    inline-size: min(85vw, 12rem);
+    padding-inline: clamp(1rem, 2vw, 1.5rem);
+}
+
+.status {
+    inset-block-start: clamp(1.25rem, 2.5vh, 2rem);
+    padding-block: clamp(0.875rem, 1.8vh, 1.25rem);
+    font-size: clamp(1.125rem, 1.8vw, 1.3125rem);
+    line-height: 1.6;
+}
+
 .status a {
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
@@ -69,21 +85,12 @@ p {
 }
 
 .items {
-    position: absolute;
     inset-block-start: clamp(12rem, 24vh, 16rem);
-    inset-inline-start: clamp(2.25rem, 4vw, 3rem);
-    inline-size: min(85vw, 12rem);
     padding-block: clamp(0.875rem, 1.8vh, 1.25rem);
-    padding-inline: clamp(1rem, 2vw, 1.5rem);
-    background: black;
-    border: clamp(0.25rem, 0.4vw, 0.3125rem) solid white;
-    color: white;
-    font-family: "Courier New", monospace;
-    container-type: inline-size;
 }
 
 .items a {
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
@@ -104,155 +111,93 @@ p {
 }
 
 .items .heart {
-    color: red;
+    color: var(--color-accent);
     margin-inline-end: 0.375rem;
 }
 
-.about {
-    position: absolute;
+.about,
+.projects,
+.social {
     inset-block-start: clamp(1.25rem, 2.5vh, 2rem);
     inset-inline-start: clamp(14rem, 28vw, 18rem);
-    inset-block-end: clamp(0.75rem, 1.5vh, 1.25rem);
     inline-size: min(85vw, 36rem);
     max-block-size: calc(100dvh - clamp(2.5rem, 5vh, 4rem));
     padding-block: clamp(1rem, 2vh, 1.5rem);
     padding-inline: clamp(1rem, 2vw, 1.5rem);
-    background: black;
-    border: clamp(0.25rem, 0.4vw, 0.3125rem) solid white;
-    color: white;
-    font-family: "Courier New", monospace;
     font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
     line-height: 1.6;
     overflow-y: auto;
-    container-type: inline-size;
 }
 
-.about h2 {
-    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
-    font-weight: bold;
-    margin-block-end: clamp(1rem, 2vh, 1.5rem);
-    color: white;
-}
-
-.about p {
-    margin-block-end: clamp(1rem, 2vh, 1.25rem);
-    font-weight: bold;
-    text-align: left;
-}
-
-.about a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.about a:hover {
-    opacity: 0.7;
-}
-
+.about,
 .projects {
-    position: absolute;
-    inset-block-start: clamp(1.25rem, 2.5vh, 2rem);
-    inset-inline-start: clamp(14rem, 28vw, 18rem);
     inset-block-end: clamp(0.75rem, 1.5vh, 1.25rem);
-    inline-size: min(85vw, 36rem);
-    max-block-size: calc(100dvh - clamp(2.5rem, 5vh, 4rem));
-    padding-block: clamp(1rem, 2vh, 1.5rem);
-    padding-inline: clamp(1rem, 2vw, 1.5rem);
-    background: black;
-    border: clamp(0.25rem, 0.4vw, 0.3125rem) solid white;
-    color: white;
-    font-family: "Courier New", monospace;
-    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
-    line-height: 1.6;
-    overflow-y: auto;
-    container-type: inline-size;
-}
-
-.projects h2 {
-    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
-    font-weight: bold;
-    margin-block-end: clamp(1rem, 2vh, 1.5rem);
-    color: white;
-}
-
-.projects p {
-    margin-block-end: clamp(1rem, 2vh, 1.25rem);
-    font-weight: bold;
-    text-align: left;
-}
-
-.projects a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.projects a:hover {
-    opacity: 0.7;
 }
 
 .social {
-    position: absolute;
-    inset-block-start: clamp(1.25rem, 2.5vh, 2rem);
-    inset-inline-start: clamp(14rem, 28vw, 18rem);
     inset-block-end: calc(100dvh - clamp(12rem, 24vh, 16rem) + clamp(0.875rem, 1.8vh, 1.25rem));
-    inline-size: min(85vw, 36rem);
-    max-block-size: calc(100dvh - clamp(2.5rem, 5vh, 4rem));
-    padding-block: clamp(1rem, 2vh, 1.5rem);
-    padding-inline: clamp(1rem, 2vw, 1.5rem);
-    background: black;
-    border: clamp(0.25rem, 0.4vw, 0.3125rem) solid white;
-    color: white;
-    font-family: "Courier New", monospace;
-    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
-    line-height: 1.6;
-    overflow-y: auto;
-    container-type: inline-size;
 }
 
+.about h2,
+.projects h2,
 .social h2 {
     font-size: clamp(1.375rem, 2.5vw, 1.75rem);
     font-weight: bold;
     margin-block-end: clamp(1rem, 2vh, 1.5rem);
-    color: white;
+    color: var(--color-text);
 }
 
+.about p,
+.projects p,
 .social p {
     margin-block-end: clamp(1rem, 2vh, 1.25rem);
     font-weight: bold;
     text-align: left;
 }
 
+.about a,
+.projects a,
 .social a {
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
 
+.about a:hover,
+.projects a:hover,
 .social a:hover {
     opacity: 0.7;
 }
 
+.social ul li a {
+    color: #87ceeb;
+}
+
+.social ul li a:hover {
+    color: #add8e6;
+    opacity: 1;
+}
+
+
 @media screen and (min-width: 48rem) {
-    .status {
-        inset-block-start: clamp(2.25rem, 3.5vh, 3rem);
+    .status,
+    .items {
         inset-inline-start: clamp(3.25rem, 5vw, 4.25rem);
         inline-size: min(40vw, 15rem);
-        padding-block: clamp(1rem, 1.8vh, 1.375rem);
         padding-inline: clamp(1.25rem, 2vw, 1.625rem);
         border-width: clamp(0.3125rem, 0.45vw, 0.375rem);
+    }
+
+    .status {
+        inset-block-start: clamp(2.25rem, 3.5vh, 3rem);
+        padding-block: clamp(1rem, 1.8vh, 1.375rem);
         font-size: clamp(1.1875rem, 1.8vw, 1.375rem);
     }
 
     .items {
         inset-block-start: clamp(14.5rem, 26vh, 18rem);
-        inset-inline-start: clamp(3.25rem, 5vw, 4.25rem);
-        inline-size: min(40vw, 15rem);
         min-block-size: clamp(12rem, 28vh, 15rem);
         padding-block: clamp(1.75rem, 3.5vh, 2.5rem);
-        padding-inline: clamp(1.5rem, 2.5vw, 2rem);
-        border-width: clamp(0.3125rem, 0.45vw, 0.375rem);
         font-size: clamp(1.4375rem, 2.3vw, 1.6875rem);
         line-height: 2;
     }
@@ -261,9 +206,10 @@ p {
         font-size: clamp(1.625rem, 4.2cqi, 2rem);
     }
 
-    .about {
+    .about,
+    .projects,
+    .social {
         inset-block-start: clamp(2.25rem, 3.5vh, 3rem);
-        inset-block-end: clamp(1.5rem, 2.5vh, 2.25rem);
         inset-inline-start: clamp(19rem, 43vw, 22rem);
         inline-size: min(48vw, 38rem);
         max-block-size: calc(100dvh - clamp(4.5rem, 7vh, 6rem));
@@ -274,64 +220,43 @@ p {
         font-size: clamp(1.0625rem, 1.7vw, 1.1875rem);
     }
 
-    .about h2 {
-        font-size: clamp(1.5rem, 2.8vw, 1.875rem);
-    }
-
+    .about,
     .projects {
-        inset-block-start: clamp(2.25rem, 3.5vh, 3rem);
         inset-block-end: clamp(1.5rem, 2.5vh, 2.25rem);
-        inset-inline-start: clamp(19rem, 43vw, 22rem);
-        inline-size: min(48vw, 38rem);
-        max-block-size: calc(100dvh - clamp(4.5rem, 7vh, 6rem));
-        min-block-size: clamp(26rem, 58vh, 35rem);
-        padding-block: clamp(2rem, 4vh, 3rem);
-        padding-inline: clamp(1.75rem, 3.5vw, 2.5rem);
-        border-width: clamp(0.3125rem, 0.45vw, 0.375rem);
-        font-size: clamp(1.0625rem, 1.7vw, 1.1875rem);
-    }
-
-    .projects h2 {
-        font-size: clamp(1.5rem, 2.8vw, 1.875rem);
     }
 
     .social {
-        inset-block-start: clamp(2.25rem, 3.5vh, 3rem);
         inset-block-end: calc(100dvh - clamp(14.5rem, 26vh, 18rem) + clamp(1.75rem, 3.5vh, 2.5rem));
-        inset-inline-start: clamp(19rem, 43vw, 22rem);
-        inline-size: min(48vw, 38rem);
-        max-block-size: calc(100dvh - clamp(4.5rem, 7vh, 6rem));
-        min-block-size: clamp(26rem, 58vh, 35rem);
-        padding-block: clamp(2rem, 4vh, 3rem);
-        padding-inline: clamp(1.75rem, 3.5vw, 2.5rem);
-        border-width: clamp(0.3125rem, 0.45vw, 0.375rem);
-        font-size: clamp(1.0625rem, 1.7vw, 1.1875rem);
     }
 
+    .about h2,
+    .projects h2,
     .social h2 {
         font-size: clamp(1.5rem, 2.8vw, 1.875rem);
     }
 }
 
+
+
 @media screen and (min-width: 64rem) {
-    .status {
-        inset-block-start: clamp(3rem, 4.5vh, 4.5rem);
+    .status,
+    .items {
         inset-inline-start: clamp(4rem, 6vw, 6rem);
         inline-size: min(35vw, 17.5rem);
-        padding-block: clamp(1.25rem, 2.2vh, 1.75rem);
         padding-inline: clamp(1.5rem, 2.5vw, 2rem);
         border-width: clamp(0.375rem, 0.5vw, 0.4375rem);
+    }
+
+    .status {
+        inset-block-start: clamp(3rem, 4.5vh, 4.5rem);
+        padding-block: clamp(1.25rem, 2.2vh, 1.75rem);
         font-size: clamp(1.25rem, 1.9vw, 1.4375rem);
     }
 
     .items {
         inset-block-start: clamp(17rem, 30vh, 21.5rem);
-        inset-inline-start: clamp(4rem, 6vw, 6rem);
-        inline-size: min(35vw, 17.5rem);
         min-block-size: clamp(14rem, 32vh, 18rem);
         padding-block: clamp(2rem, 4.2vh, 3rem);
-        padding-inline: clamp(2rem, 3vw, 2.5rem);
-        border-width: clamp(0.375rem, 0.5vw, 0.4375rem);
         font-size: clamp(1.5625rem, 2.5vw, 1.8125rem);
         line-height: 2;
     }
@@ -340,9 +265,10 @@ p {
         font-size: clamp(1.875rem, 4.8cqi, 2.25rem);
     }
 
-    .about {
+    .about,
+    .projects,
+    .social {
         inset-block-start: clamp(3rem, 4.5vh, 4.5rem);
-        inset-block-end: clamp(2rem, 3.5vh, 3.25rem);
         inset-inline-start: clamp(23rem, 46vw, 26rem);
         inline-size: min(50vw, 44rem);
         max-block-size: calc(100dvh - clamp(6rem, 9vh, 9rem));
@@ -353,64 +279,43 @@ p {
         font-size: clamp(1.125rem, 1.8vw, 1.25rem);
     }
 
-    .about h2 {
-        font-size: clamp(1.625rem, 3vw, 2rem);
-    }
-
+    .about,
     .projects {
-        inset-block-start: clamp(3rem, 4.5vh, 4.5rem);
         inset-block-end: clamp(2rem, 3.5vh, 3.25rem);
-        inset-inline-start: clamp(23rem, 46vw, 26rem);
-        inline-size: min(50vw, 44rem);
-        max-block-size: calc(100dvh - clamp(6rem, 9vh, 9rem));
-        min-block-size: clamp(32rem, 68vh, 42rem);
-        padding-block: clamp(2.5rem, 5vh, 3.5rem);
-        padding-inline: clamp(2rem, 4vw, 3rem);
-        border-width: clamp(0.375rem, 0.5vw, 0.4375rem);
-        font-size: clamp(1.125rem, 1.8vw, 1.25rem);
-    }
-
-    .projects h2 {
-        font-size: clamp(1.625rem, 3vw, 2rem);
     }
 
     .social {
-        inset-block-start: clamp(3rem, 4.5vh, 4.5rem);
         inset-block-end: calc(100dvh - clamp(17rem, 30vh, 21.5rem) + clamp(2rem, 4.2vh, 3rem));
-        inset-inline-start: clamp(23rem, 46vw, 26rem);
-        inline-size: min(50vw, 44rem);
-        max-block-size: calc(100dvh - clamp(6rem, 9vh, 9rem));
-        min-block-size: clamp(32rem, 68vh, 42rem);
-        padding-block: clamp(2.5rem, 5vh, 3.5rem);
-        padding-inline: clamp(2rem, 4vw, 3rem);
-        border-width: clamp(0.375rem, 0.5vw, 0.4375rem);
-        font-size: clamp(1.125rem, 1.8vw, 1.25rem);
     }
 
+    .about h2,
+    .projects h2,
     .social h2 {
         font-size: clamp(1.625rem, 3vw, 2rem);
     }
 }
 
+
+
 @media screen and (min-width: 90rem) {
-    .status {
-        inset-block-start: clamp(4rem, 5.5vh, 6rem);
+    .status,
+    .items {
         inset-inline-start: clamp(5.25rem, 7vw, 7.5rem);
         inline-size: min(30vw, 20rem);
-        padding-block: clamp(1.5rem, 2.5vh, 2rem);
         padding-inline: clamp(1.75rem, 2.8vw, 2.25rem);
         border-width: clamp(0.4375rem, 0.55vw, 0.5rem);
+    }
+
+    .status {
+        inset-block-start: clamp(4rem, 5.5vh, 6rem);
+        padding-block: clamp(1.5rem, 2.5vh, 2rem);
         font-size: clamp(1.3125rem, 2vw, 1.5rem);
     }
 
     .items {
         inset-block-start: clamp(22rem, 37vh, 29rem);
-        inset-inline-start: clamp(5.25rem, 7vw, 7.5rem);
-        inline-size: min(30vw, 20rem);
         min-block-size: clamp(16rem, 36vh, 21rem);
         padding-block: clamp(2rem, 4.2vh, 3.5rem);
-        padding-inline: clamp(2rem, 3.5vw, 3rem);
-        border-width: clamp(0.4375rem, 0.55vw, 0.5rem);
         font-size: clamp(1.5625rem, 2.5vw, 1.8125rem);
         line-height: 2;
     }
@@ -419,9 +324,10 @@ p {
         font-size: clamp(1.875rem, 4.8cqi, 2.375rem);
     }
 
-    .about {
+    .about,
+    .projects,
+    .social {
         inset-block-start: clamp(4rem, 5.5vh, 6rem);
-        inset-block-end: clamp(2.5rem, 4vh, 4.25rem);
         inset-inline-start: clamp(26.5rem, 36vw, 32rem);
         inline-size: min(52vw, 54rem);
         max-block-size: calc(100dvh - clamp(8rem, 11vh, 12rem));
@@ -432,64 +338,43 @@ p {
         font-size: clamp(1.1875rem, 1.9vw, 1.3125rem);
     }
 
-    .about h2 {
-        font-size: clamp(1.75rem, 3.2vw, 2.125rem);
-    }
-
+    .about,
     .projects {
-        inset-block-start: clamp(4rem, 5.5vh, 6rem);
         inset-block-end: clamp(2.5rem, 4vh, 4.25rem);
-        inset-inline-start: clamp(26.5rem, 36vw, 32rem);
-        inline-size: min(52vw, 54rem);
-        max-block-size: calc(100dvh - clamp(8rem, 11vh, 12rem));
-        min-block-size: clamp(38rem, 72vh, 52rem);
-        padding-block: clamp(3rem, 6vh, 4.5rem);
-        padding-inline: clamp(2.75rem, 5vw, 4rem);
-        border-width: clamp(0.4375rem, 0.55vw, 0.5rem);
-        font-size: clamp(1.1875rem, 1.9vw, 1.3125rem);
-    }
-
-    .projects h2 {
-        font-size: clamp(1.75rem, 3.2vw, 2.125rem);
     }
 
     .social {
-        inset-block-start: clamp(4rem, 5.5vh, 6rem);
         inset-block-end: calc(100dvh - clamp(22rem, 37vh, 29rem) + clamp(2rem, 4.2vh, 3.5rem));
-        inset-inline-start: clamp(26.5rem, 36vw, 32rem);
-        inline-size: min(52vw, 54rem);
-        max-block-size: calc(100dvh - clamp(8rem, 11vh, 12rem));
-        min-block-size: clamp(38rem, 72vh, 52rem);
-        padding-block: clamp(3rem, 6vh, 4.5rem);
-        padding-inline: clamp(2.75rem, 5vw, 4rem);
-        border-width: clamp(0.4375rem, 0.55vw, 0.5rem);
-        font-size: clamp(1.1875rem, 1.9vw, 1.3125rem);
     }
 
+    .about h2,
+    .projects h2,
     .social h2 {
         font-size: clamp(1.75rem, 3.2vw, 2.125rem);
     }
 }
 
+
+
 @media screen and (min-width: 120rem) {
-    .status {
-        inset-block-start: clamp(5.5rem, 6.5vh, 7.5rem);
+    .status,
+    .items {
         inset-inline-start: clamp(7rem, 8vw, 9rem);
         inline-size: min(28vw, 22.5rem);
-        padding-block: clamp(1.75rem, 2.8vh, 2.25rem);
         padding-inline: clamp(2rem, 3vw, 2.5rem);
         border-width: clamp(0.5rem, 0.6vw, 0.5625rem);
+    }
+
+    .status {
+        inset-block-start: clamp(5.5rem, 6.5vh, 7.5rem);
+        padding-block: clamp(1.75rem, 2.8vh, 2.25rem);
         font-size: clamp(1.375rem, 2.1vw, 1.5625rem);
     }
 
     .items {
         inset-block-start: clamp(27rem, 43vh, 35.5rem);
-        inset-inline-start: clamp(7rem, 8vw, 9rem);
-        inline-size: min(28vw, 22.5rem);
         min-block-size: clamp(18rem, 40vh, 24rem);
         padding-block: clamp(2.5rem, 5vh, 4rem);
-        padding-inline: clamp(2.5rem, 4vw, 3.5rem);
-        border-width: clamp(0.5rem, 0.6vw, 0.5625rem);
         font-size: clamp(1.625rem, 2.6vw, 1.875rem);
         line-height: 2;
     }
@@ -498,9 +383,10 @@ p {
         font-size: clamp(2rem, 5.2cqi, 2.5rem);
     }
 
-    .about {
+    .about,
+    .projects,
+    .social {
         inset-block-start: clamp(5.5rem, 6.5vh, 7.5rem);
-        inset-block-end: clamp(3.5rem, 5vh, 5.75rem);
         inset-inline-start: clamp(30.5rem, 34vw, 38rem);
         inline-size: min(54vw, 65rem);
         max-block-size: calc(100dvh - clamp(11rem, 13vh, 15rem));
@@ -511,64 +397,43 @@ p {
         font-size: clamp(1.25rem, 2vw, 1.375rem);
     }
 
-    .about h2 {
-        font-size: clamp(1.875rem, 3.5vw, 2.25rem);
-    }
-
+    .about,
     .projects {
-        inset-block-start: clamp(5.5rem, 6.5vh, 7.5rem);
         inset-block-end: clamp(3.5rem, 5vh, 5.75rem);
-        inset-inline-start: clamp(30.5rem, 34vw, 38rem);
-        inline-size: min(54vw, 65rem);
-        max-block-size: calc(100dvh - clamp(11rem, 13vh, 15rem));
-        min-block-size: clamp(46rem, 78vh, 62rem);
-        padding-block: clamp(3.5rem, 7vh, 5.25rem);
-        padding-inline: clamp(3.25rem, 6vw, 4.75rem);
-        border-width: clamp(0.5rem, 0.6vw, 0.5625rem);
-        font-size: clamp(1.25rem, 2vw, 1.375rem);
-    }
-
-    .projects h2 {
-        font-size: clamp(1.875rem, 3.5vw, 2.25rem);
     }
 
     .social {
-        inset-block-start: clamp(5.5rem, 6.5vh, 7.5rem);
         inset-block-end: calc(100dvh - clamp(27rem, 43vh, 35.5rem) + clamp(2.5rem, 5vh, 4rem));
-        inset-inline-start: clamp(30.5rem, 34vw, 38rem);
-        inline-size: min(54vw, 65rem);
-        max-block-size: calc(100dvh - clamp(11rem, 13vh, 15rem));
-        min-block-size: clamp(46rem, 78vh, 62rem);
-        padding-block: clamp(3.5rem, 7vh, 5.25rem);
-        padding-inline: clamp(3.25rem, 6vw, 4.75rem);
-        border-width: clamp(0.5rem, 0.6vw, 0.5625rem);
-        font-size: clamp(1.25rem, 2vw, 1.375rem);
     }
 
+    .about h2,
+    .projects h2,
     .social h2 {
         font-size: clamp(1.875rem, 3.5vw, 2.25rem);
     }
 }
 
+
+
 @media screen and (min-width: 160rem) {
-    .status {
-        inset-block-start: clamp(7rem, 7.5vh, 9rem);
+    .status,
+    .items {
         inset-inline-start: clamp(8.5rem, 9vw, 10.5rem);
         inline-size: min(25vw, 26.25rem);
-        padding-block: clamp(2rem, 3.2vh, 2.75rem);
         padding-inline: clamp(2.25rem, 3.5vw, 3rem);
         border-width: clamp(0.5625rem, 0.7vw, 0.6875rem);
+    }
+
+    .status {
+        inset-block-start: clamp(7rem, 7.5vh, 9rem);
+        padding-block: clamp(2rem, 3.2vh, 2.75rem);
         font-size: clamp(1.5rem, 2.3vw, 1.6875rem);
     }
 
     .items {
         inset-block-start: clamp(32rem, 49vh, 42.5rem);
-        inset-inline-start: clamp(8.5rem, 9vw, 10.5rem);
-        inline-size: min(25vw, 26.25rem);
         min-block-size: clamp(20rem, 44vh, 28rem);
         padding-block: clamp(3rem, 5.5vh, 4.75rem);
-        padding-inline: clamp(3rem, 4.5vw, 4rem);
-        border-width: clamp(0.5625rem, 0.7vw, 0.6875rem);
         font-size: clamp(1.75rem, 2.8vw, 2rem);
         line-height: 2;
     }
@@ -577,9 +442,10 @@ p {
         font-size: clamp(2.1875rem, 5.6cqi, 2.75rem);
     }
 
-    .about {
+    .about,
+    .projects,
+    .social {
         inset-block-start: clamp(7rem, 7.5vh, 9rem);
-        inset-block-end: clamp(4.5rem, 6vh, 6.75rem);
         inset-inline-start: clamp(36rem, 32vw, 46rem);
         inline-size: min(56vw, 80rem);
         max-block-size: calc(100dvh - clamp(14rem, 15vh, 18rem));
@@ -590,44 +456,22 @@ p {
         font-size: clamp(1.375rem, 2.2vw, 1.5rem);
     }
 
-    .about h2 {
-        font-size: clamp(2rem, 3.8vw, 2.5rem);
-    }
-
+    .about,
     .projects {
-        inset-block-start: clamp(7rem, 7.5vh, 9rem);
         inset-block-end: clamp(4.5rem, 6vh, 6.75rem);
-        inset-inline-start: clamp(36rem, 32vw, 46rem);
-        inline-size: min(56vw, 80rem);
-        max-block-size: calc(100dvh - clamp(14rem, 15vh, 18rem));
-        min-block-size: clamp(56rem, 82vh, 76rem);
-        padding-block: clamp(4.25rem, 8vh, 6.25rem);
-        padding-inline: clamp(4rem, 7vw, 5.75rem);
-        border-width: clamp(0.5625rem, 0.7vw, 0.6875rem);
-        font-size: clamp(1.375rem, 2.2vw, 1.5rem);
-    }
-
-    .projects h2 {
-        font-size: clamp(2rem, 3.8vw, 2.5rem);
     }
 
     .social {
-        inset-block-start: clamp(7rem, 7.5vh, 9rem);
         inset-block-end: calc(100dvh - clamp(32rem, 49vh, 42.5rem) + clamp(3rem, 5.5vh, 4.75rem));
-        inset-inline-start: clamp(36rem, 32vw, 46rem);
-        inline-size: min(56vw, 80rem);
-        max-block-size: calc(100dvh - clamp(14rem, 15vh, 18rem));
-        min-block-size: clamp(56rem, 82vh, 76rem);
-        padding-block: clamp(4.25rem, 8vh, 6.25rem);
-        padding-inline: clamp(4rem, 7vw, 5.75rem);
-        border-width: clamp(0.5625rem, 0.7vw, 0.6875rem);
-        font-size: clamp(1.375rem, 2.2vw, 1.5rem);
     }
 
+    .about h2,
+    .projects h2,
     .social h2 {
         font-size: clamp(2rem, 3.8vw, 2.5rem);
     }
 }
+
 
 @media screen and (max-width: 30rem) {
     .status {
